@@ -12,5 +12,5 @@ El sitio web dinamico de la tienda de ropa deportiva Fast Track muestra una vari
 
 Los datos de este sitio se organizan en un modelo de relación de 1 a N, en donde cada producto pertenece a una sola categoría.
 
-Cualquier persona puede acceder al sitio y navegar en el pero solo el usuario que es administrado podra realizar acciones sobre los items, tales como: crear, modificar o eliminar.
+Cualquier persona puede acceder al sitio y navegar en el pero solo el usuario que es administrador podra realizar acciones sobre los items, tales como: crear, modificar o eliminar.
 
