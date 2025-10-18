@@ -12,4 +12,8 @@ class PublicController {
     public function showHome(){
         $this->publicView->showHome();
     }
+
+    public function showFormLogin(){
+        $this->publicView->mostrarFormulario();
+    }
 }

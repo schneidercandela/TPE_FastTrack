@@ -5,7 +5,7 @@
             {foreach $productos as $producto}
                 <li>
                     <h3>{$producto->nombre}</h3>
-                    <a class="link" href="detallesProducto/{$producto->id}">Ver detalles</a>
+                    <a class="link" href="detalleproducto/{$producto->id_producto}">Ver detalles</a>
                 </li>
             {/foreach}
         </ul>

@@ -21,4 +21,21 @@ class ProductoView{
         $this->smarty->assign('productos', $productos);
         $this->smarty->display('productosPorCategoria.tpl');
     }
+
+    public function mostrarDetalleProducto($producto, $categoria){
+        $this->smarty->assign('categoria', $categoria);
+        $this->smarty->assign('producto', $producto);
+        $this->smarty->display('detalleProducto.tpl');
+    }
+
+    public function mostrarFormAddProducto($categorias){
+        $this->smarty->assign('categorias', $categorias);
+        $this->smarty->display('formAgregarProducto.tpl');
+    }
+
+    public function mostrarFormEditProducto($producto, $categorias){
+        $this->smarty->assign('categorias', $categorias);
+        $this->smarty->assign('producto', $producto);
+        $this->smarty->display('formEditarProducto.tpl'); 
+    }
 }

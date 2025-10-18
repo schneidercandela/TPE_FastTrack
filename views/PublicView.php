@@ -13,4 +13,8 @@ class PublicView{
     public function showHome(){
         $this->smarty->display('home.tpl');
     }
+
+    public function mostrarFormulario(){
+        $this->smarty->display('login.tpl');
+    }
 }

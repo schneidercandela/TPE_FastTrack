@@ -8,7 +8,8 @@
         <h2>Bienvenido</h2>
         <p>Explora nuestra colección de ropa deportiva.</p>
         <a href="categorias">Ver categorias</a>
-         <a href="productos">Ver productos</a>
+        <a href="productos">Ver productos</a>
+        <a href="formlogin">Iniciar sesion</a>
     </section>
 </main>
 
