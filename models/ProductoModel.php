@@ -19,7 +19,7 @@ class ProductoModel{
 
     public function getProductos(){
         $db=$this->crearConexion();
-        $sentencia= $db->prepare("SELECT * FROM producto");
+        $sentencia = $db->prepare(" SELECT p.*, c.nombre AS categoria_nombre FROM producto p JOIN categoria c ON p.categoria = c.id_categoria ");
         $sentencia->execute();
         $productos=$sentencia->fetchAll(PDO::FETCH_OBJ);
 

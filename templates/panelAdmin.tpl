@@ -21,7 +21,7 @@
                         <td>{$producto->id_producto}</td>
                         <td>{$producto->nombre}</td>
                         <td>{$producto->detalle}</td>
-                        <td>{$producto->categoria}</td>
+                        <td>{$producto->categoria_nombre}</td>
                         <td>
                             <a href="formeditarproducto/{$producto->id_producto}">Editar</a>
                             <a href="eliminarproducto/{$producto->id_producto}">Eliminar</a>

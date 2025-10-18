@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2025-10-18 17:36:35
+/* Smarty version 3.1.34-dev-7, created on 2025-10-18 20:13:13
   from 'C:\xampp\htdocs\TPEWeb2_FastTrack\templates\panelAdmin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_68f3b403b90970_98306231',
+  'unifunc' => 'content_68f3d8b958f3a5_65530501',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5b2fd6bfda76ffee460ec4fc3c398756495d4e37' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPEWeb2_FastTrack\\templates\\panelAdmin.tpl',
-      1 => 1760801793,
+      1 => 1760811158,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_68f3b403b90970_98306231 (Smarty_Internal_Template $_smarty_tpl) {
+function content_68f3d8b958f3a5_65530501 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -54,7 +54,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['producto']->value) {
 </td>
                         <td><?php echo $_smarty_tpl->tpl_vars['producto']->value->detalle;?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['producto']->value->categoria;?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['producto']->value->categoria_nombre;?>
 </td>
                         <td>
                             <a href="formeditarproducto/<?php echo $_smarty_tpl->tpl_vars['producto']->value->id_producto;?>
