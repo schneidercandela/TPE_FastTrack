@@ -1,69 +1,115 @@
 <footer class="site-footer">
-    <div class="container footer-content">
-        <div class="footer-info">
-            <h4>Fast Track</h4>
-            <p>Ropa deportiva para hombres y mujeres</p>
-            <p>📍 Buenos Aires, Argentina</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>⚡ FAST TRACK</h3>
+                    <p>Equipamiento deportivo de alta performance</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Olavarrría, Buenos Aires, Argentina</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="{$base_url}productos">Productos</a></li>
+                        <li><a href="{$base_url}categorias">Categorías</a></li>
+                        <li><a href="{$base_url}admin">Administración</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Síguenos</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fast Track - Todos los derechos reservados</p>
+            </div>
         </div>
-        <div class="footer-social">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-whatsapp"></i></a>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>© {$smarty.now|date_format:"%Y"} Fast Track - Todos los derechos reservados.</p>
-    </div>
-</footer>
-
-<style>
-    .site-footer {
-        background-color: #0d0d0d;
-        color: #fff;
-        padding: 30px 0 15px;
-        margin-top: 40px;
-        text-align: center;
-    }
-
-    .footer-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-
-    .footer-info h4 {
-        color: #00ff88;
-        margin-bottom: 10px;
-    }
-
-    .footer-social a {
-        color: #fff;
-        margin: 0 10px;
-        font-size: 1.4em;
-        transition: color 0.3s, text-shadow 0.3s;
-    }
-
-    .footer-social a:hover {
-        color: #00ff88;
-        text-shadow: 0 0 8px #00ff88;
-    }
-
-    .footer-bottom {
-        margin-top: 20px;
-        font-size: 0.9em;
-        opacity: 0.7;
-    }
-
-    @media (max-width: 768px) {
+    </footer>
+    
+    <style>
+        .site-footer {
+            background: linear-gradient(180deg, #1a1a1a, #0d0d0d);
+            color: #fff;
+            padding: 40px 0 20px;
+            margin-top: 80px;
+        }
+        
         .footer-content {
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-info h3 {
+            color: #00ff88;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .footer-links h4, .footer-social h4 {
+            color: #00ff88;
+            margin-bottom: 15px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #00ff88;
+        }
+        
+        .social-icons {
+            display: flex;
             gap: 15px;
         }
-    }
-</style>
-
-<!-- Librería de iconos -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 255, 136, 0.1);
+            border: 2px solid #00ff88;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #00ff88;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background: #00ff88;
+            color: #000;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 255, 136, 0.5);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0, 255, 136, 0.2);
+            color: #999;
+        }
+    </style>
+    
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        toggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
