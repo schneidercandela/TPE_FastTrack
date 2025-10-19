@@ -57,8 +57,15 @@ class ProductoController{
     public function formEditProducto($id){
         $producto = $this->model->getProductoById($id);
         $categorias = $this->modelCategoria->getCategorias();
+
+        if (!$producto) {
+            echo "⚠️ No se encontró producto con ID: " . htmlspecialchars($id);
+            die();
+        }
+
         $this->view->mostrarFormEditProducto($producto, $categorias);
-    }
+}
+
 
     public function editProducto() {
         if(isset($_POST['id_producto'], $_POST['nombre'], $_POST['detalle'], $_POST['id_categoria'])) {

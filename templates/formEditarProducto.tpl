@@ -3,7 +3,7 @@
 <main>
     <h2>Editar Producto</h2>
 
-    <form action="editarproducto" method="POST">
+    <form action="{$base_url}editarproducto" method="POST">
         <!-- Campo oculto con el ID del producto -->
         <input type="hidden" name="id_producto" value="{$producto->id_producto}">
 
@@ -31,6 +31,7 @@
         </div>
 
         <button type="submit">Guardar Cambios</button>
+        <a href="{$base_url}admin">Cancelar</a>
     </form>
 </main>
 

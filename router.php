@@ -28,10 +28,12 @@ switch($param[0]){
         $controller->showProductos();
         break; 
     case 'productosporcategoria':
+    case 'categoria': // Agregar esta línea para soportar ambas rutas
         $controller = new ProductoController();
         $controller->showProductoPorCategoria($param[1]);
         break; 
     case 'detalleproducto':
+    case 'producto': // Agregar esta línea para soportar ambas rutas
         $controller = new ProductoController();
         $controller->showDetalleProducto($param[1]);
         break;
@@ -41,7 +43,7 @@ switch($param[0]){
         break;  
     case 'login':
         $controller = new AuthController();
-        $controller->Login();
+        $controller->login(); // Cambiar Login() a login() (minúscula)
         break;  
     case 'admin':
         $controller = new AdminController();
@@ -59,7 +61,7 @@ switch($param[0]){
         $controller = new ProductoController();
         $controller->addProducto();
         break;     
-     case 'formeditarproducto':
+    case 'formeditarproducto':
         $controller = new ProductoController();
         $controller->formEditProducto($param[1]);
         break;
@@ -68,6 +70,7 @@ switch($param[0]){
         $controller->editProducto();
         break;           
     default: 
-        echo "ERROR";
+        header("HTTP/1.0 404 Not Found");
+        echo "ERROR 404: Página no encontrada";
         break;
 }

@@ -12,28 +12,9 @@
         <div class="categorias-grid">
             {foreach from=$categorias item=categoria}
                 <div class="categoria-card">
-                    <a href="{$base_url}categoria/{$categoria->id}">
+                    <a href="{$base_url}productosporcategoria/{$categoria->id_categoria}">
                         <div class="categoria-img" style="background-image: url('{$categoria->imagen}');"></div>
                         <h3>{$categoria->nombre}</h3>
-                    </a>
-                </div>
-            {/foreach}
-        </div>
-    </div>
-</section>
-
-<section class="productos-destacados">
-    <div class="container">
-        <h2>Productos destacados</h2>
-        <div class="productos-grid">
-            {foreach from=$productos item=producto}
-                <div class="producto-card">
-                    <a href="{$base_url}producto/{$producto->id}">
-                        <div class="producto-img" style="background-image: url('{$producto->imagen}');"></div>
-                        <div class="producto-info">
-                            <h4>{$producto->nombre}</h4>
-                            <p class="precio">$ {$producto->precio}</p>
-                        </div>
                     </a>
                 </div>
             {/foreach}

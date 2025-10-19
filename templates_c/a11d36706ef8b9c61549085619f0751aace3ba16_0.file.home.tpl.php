@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2025-10-18 20:32:17
+/* Smarty version 3.1.34-dev-7, created on 2025-10-19 06:49:28
   from 'C:\xampp\htdocs\TPEWeb2_FastTrack\templates\home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_68f3dd31d175c2_74784036',
+  'unifunc' => 'content_68f46dd8d7b093_84950255',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a11d36706ef8b9c61549085619f0751aace3ba16' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPEWeb2_FastTrack\\templates\\home.tpl',
-      1 => 1760812324,
+      1 => 1760849069,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_68f3dd31d175c2_74784036 (Smarty_Internal_Template $_smarty_tpl) {
+function content_68f46dd8d7b093_84950255 (Smarty_Internal_Template $_smarty_tpl) {
 ?><section class="hero-banner">
     <div class="hero-content">
         <h1>FAST TRACK</h1>
@@ -41,43 +41,12 @@ foreach ($_from as $_smarty_tpl->tpl_vars['categoria']->value) {
 ?>
                 <div class="categoria-card">
                     <a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
-categoria/<?php echo $_smarty_tpl->tpl_vars['categoria']->value->id;?>
+productosporcategoria/<?php echo $_smarty_tpl->tpl_vars['categoria']->value->id_categoria;?>
 ">
                         <div class="categoria-img" style="background-image: url('<?php echo $_smarty_tpl->tpl_vars['categoria']->value->imagen;?>
 ');"></div>
                         <h3><?php echo $_smarty_tpl->tpl_vars['categoria']->value->nombre;?>
 </h3>
-                    </a>
-                </div>
-            <?php
-}
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-        </div>
-    </div>
-</section>
-
-<section class="productos-destacados">
-    <div class="container">
-        <h2>Productos destacados</h2>
-        <div class="productos-grid">
-            <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['productos']->value, 'producto');
-if ($_from !== null) {
-foreach ($_from as $_smarty_tpl->tpl_vars['producto']->value) {
-?>
-                <div class="producto-card">
-                    <a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
-producto/<?php echo $_smarty_tpl->tpl_vars['producto']->value->id;?>
-">
-                        <div class="producto-img" style="background-image: url('<?php echo $_smarty_tpl->tpl_vars['producto']->value->imagen;?>
-');"></div>
-                        <div class="producto-info">
-                            <h4><?php echo $_smarty_tpl->tpl_vars['producto']->value->nombre;?>
-</h4>
-                            <p class="precio">$ <?php echo $_smarty_tpl->tpl_vars['producto']->value->precio;?>
-</p>
-                        </div>
                     </a>
                 </div>
             <?php
