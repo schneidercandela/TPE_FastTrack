@@ -32,12 +32,10 @@ switch($param[0]){
         $controller->showProductos();
         break; 
     case 'productosporcategoria':
-    case 'categoria': // Agregar esta línea para soportar ambas rutas
         $controller = new ProductoController();
         $controller->showProductoPorCategoria($param[1]);
         break; 
     case 'detalleproducto':
-    case 'producto': // Agregar esta línea para soportar ambas rutas
         $controller = new ProductoController();
         $controller->showDetalleProducto($param[1]);
         break;
@@ -47,7 +45,7 @@ switch($param[0]){
         break;  
     case 'login':
         $controller = new AuthController();
-        $controller->login(); // Cambiar Login() a login() (minúscula)
+        $controller->login(); 
         break;  
     case 'logout':
         $controller =new AuthController();
