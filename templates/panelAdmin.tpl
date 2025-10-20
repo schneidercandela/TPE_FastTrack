@@ -1,4 +1,4 @@
-{include 'header.tpl'}
+{include 'headerAdmin.tpl'}
 
 <main>
     <div class="container">
@@ -90,6 +90,54 @@
                 <i class="fas fa-box-open fa-3x"></i>
                 <p>No hay productos registrados</p>
                 <a href="{$base_url}formagregarproducto" class="btn btn-primary">Agregar primer producto</a>
+            </div>
+            {/if}
+        </div>
+        
+        <div class="admin-actions">
+            <a href="{$base_url}formagregarcategoria" class="btn btn-primary">
+                <i class="fas fa-plus"></i> Agregar Categoria
+            </a>
+        </div>
+        
+        <div class="admin-table">
+            <h2>Listado de Categorias</h2>
+            {if $productos}
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {foreach $categorias as $categoria}
+                        <tr>
+                            <td class="product-name">{$categoria->nombre}</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a href="{$base_url}formeditarcategoria/{$categoria->id_categoria}" class="btn-action btn-edit" title="Editar">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <a href="{$base_url}eliminarcategoria/{$categoria->id_categoria}" 
+                                       class="btn-action btn-delete" 
+                                       title="Eliminar"
+                                       onclick="return confirm('¿Estás seguro de eliminar esta categoria?')">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        {/foreach}
+                    </tbody>
+                </table>
+            </div>
+            {else}
+            <div class="empty-table">
+                <i class="fas fa-box-open fa-3x"></i>
+                <p>No hay categorias registrados</p>
+                <a href="{$base_url}formagregarcategoria" class="btn btn-primary">Agregar categoria</a>
             </div>
             {/if}
         </div>

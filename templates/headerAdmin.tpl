@@ -120,10 +120,7 @@
                 </div>
                 <nav class="nav-menu">
                     <ul>
-                        <li><a href="{$base_url}"><i class="fas fa-home"></i> Inicio</a></li>
-                        <li><a href="{$base_url}productos"><i class="fas fa-tshirt"></i> Productos</a></li>
-                        <li><a href="{$base_url}categorias"><i class="fas fa-tags"></i> Categorías</a></li>
-                        <li><a href="{$base_url}formlogin"><i class="fas fa-user"></i> Login</a></li>
+                        <li><a href="{$base_url}logout"><i class="fas fa-user"></i> Logout</a></li>
                     </ul>
                 </nav>
                 <div class="menu-toggle">

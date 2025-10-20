@@ -1,21 +1,8 @@
 <?php
 
-class CategoriaModel{
-    private function crearConexion(){
-        $host='localhost';
-        $userName='root';
-        $password='';
-        $database= 'db_fasttrack';
+require_once 'BaseModel.php';
 
-        try{
-            $pdo= new PDO ("mysql:host=$host;dbname=$database;charset=utf8", $userName,$password);
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);    
-        }
-        catch (Exception $e){
-            var_dump($e);
-        }
-        return $pdo;
-    }
+class CategoriaModel extends BaseModel{
 
     public function getCategorias(){
         $db=$this->crearConexion();
@@ -33,6 +20,28 @@ class CategoriaModel{
         $categoria =$sentencia->fetch(PDO::FETCH_OBJ);
 
         return $categoria;  
+    }
+
+    public function deleteCategoriaById($id){
+        $db=$this->crearConexion();
+        $sentencia= $db->prepare("DELETE FROM categoria WHERE categoria.id_categoria = ?");
+        $sentencia->execute([$id]); 
+    }
+
+    public function agregarCategoria($nombre){
+        $db=$this->crearConexion();
+        $sentencia= $db->prepare("INSERT INTO categoria (nombre) VALUES (?)");
+        $sentencia->execute([$nombre]); 
+    }
+
+    public function updateCategoriaById($nombre, $id){
+        $db=$this->crearConexion();
+        $sentencia= $db->prepare("UPDATE categoria SET nombre = ? WHERE id_categoria = ?");
+        $sentencia->execute([$nombre, $id]); 
+        if (!$sentencia->execute([$nombre, $id])) {
+            $error = $sentencia->errorInfo();
+            error_log("Error al actualizar la categoría: " . $error[2]);
+        }
     }
 }
 

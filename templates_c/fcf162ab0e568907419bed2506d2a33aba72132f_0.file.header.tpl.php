@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2025-10-19 07:03:10
+/* Smarty version 3.1.34-dev-7, created on 2025-10-20 23:08:10
   from 'C:\xampp\htdocs\TPEWeb2_FastTrack\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_68f4710e894141_77778283',
+  'unifunc' => 'content_68f6a4ba903e92_88326924',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fcf162ab0e568907419bed2506d2a33aba72132f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPEWeb2_FastTrack\\templates\\header.tpl',
-      1 => 1760850185,
+      1 => 1760994451,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_68f4710e894141_77778283 (Smarty_Internal_Template $_smarty_tpl) {
+function content_68f6a4ba903e92_88326924 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="es">
 <head>
@@ -150,8 +150,6 @@ function content_68f4710e894141_77778283 (Smarty_Internal_Template $_smarty_tpl)
 productos"><i class="fas fa-tshirt"></i> Productos</a></li>
                         <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 categorias"><i class="fas fa-tags"></i> Categorías</a></li>
-                        <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
-admin"><i class="fas fa-cog"></i> Admin</a></li>
                         <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 formlogin"><i class="fas fa-user"></i> Login</a></li>
                     </ul>

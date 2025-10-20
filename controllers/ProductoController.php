@@ -64,7 +64,7 @@ class ProductoController{
         }
 
         $this->view->mostrarFormEditProducto($producto, $categorias);
-}
+    }
 
 
     public function editProducto() {

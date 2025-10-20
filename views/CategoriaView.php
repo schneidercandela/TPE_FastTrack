@@ -15,4 +15,14 @@ class CategoriaView{
         $this->smarty->display('categorias.tpl');
 
     }
+
+     public function mostrarFormAddCategoria(){
+        $this->smarty->assign('categorias', $categorias);
+        $this->smarty->display('formAgregarCategoria.tpl');
+    }
+
+    public function mostrarFormEditCategoria($categoria){
+        $this->smarty->assign('categoria', $categoria);
+        $this->smarty->display('formEditarCategoria.tpl'); 
+    }
 }

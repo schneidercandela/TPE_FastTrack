@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 3.1.34-dev-7, created on 2025-10-20 23:08:18
+  from 'C:\xampp\htdocs\TPEWeb2_FastTrack\templates\headerAdmin.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_68f6a4c2f152a4_09253466',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'b45595e47a0462cab03b68b8cc82886e913cddd6' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\TPEWeb2_FastTrack\\templates\\headerAdmin.tpl',
+      1 => 1760994415,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_68f6a4c2f152a4_09253466 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -116,14 +139,13 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <a href="{$base_url}">⚡ FAST TRACK</a>
+                    <a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+">⚡ FAST TRACK</a>
                 </div>
                 <nav class="nav-menu">
                     <ul>
-                        <li><a href="{$base_url}"><i class="fas fa-home"></i> Inicio</a></li>
-                        <li><a href="{$base_url}productos"><i class="fas fa-tshirt"></i> Productos</a></li>
-                        <li><a href="{$base_url}categorias"><i class="fas fa-tags"></i> Categorías</a></li>
-                        <li><a href="{$base_url}formlogin"><i class="fas fa-user"></i> Login</a></li>
+                        <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+logout"><i class="fas fa-user"></i> Logout</a></li>
                     </ul>
                 </nav>
                 <div class="menu-toggle">
@@ -131,4 +153,5 @@
                 </div>
             </div>
         </div>
-    </header>
+    </header><?php }
+}

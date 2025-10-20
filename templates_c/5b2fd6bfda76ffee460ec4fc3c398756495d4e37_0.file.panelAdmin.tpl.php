@@ -1,30 +1,30 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2025-10-20 02:37:29
+/* Smarty version 3.1.34-dev-7, created on 2025-10-20 23:26:46
   from 'C:\xampp\htdocs\TPEWeb2_FastTrack\templates\panelAdmin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_68f584496ebaa6_16183781',
+  'unifunc' => 'content_68f6a91658db50_53304836',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5b2fd6bfda76ffee460ec4fc3c398756495d4e37' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPEWeb2_FastTrack\\templates\\panelAdmin.tpl',
-      1 => 1760920647,
+      1 => 1760994556,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:header.tpl' => 1,
+    'file:headerAdmin.tpl' => 1,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_68f584496ebaa6_16183781 (Smarty_Internal_Template $_smarty_tpl) {
+function content_68f6a91658db50_53304836 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\TPEWeb2_FastTrack\\libs\\plugins\\modifier.truncate.php','function'=>'smarty_modifier_truncate',),));
-$_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+$_smarty_tpl->_subTemplateRender('file:headerAdmin.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 <main>
@@ -137,6 +137,68 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 <p>No hay productos registrados</p>
                 <a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 formagregarproducto" class="btn btn-primary">Agregar primer producto</a>
+            </div>
+            <?php }?>
+        </div>
+        
+        <div class="admin-actions">
+            <a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+formagregarcategoria" class="btn btn-primary">
+                <i class="fas fa-plus"></i> Agregar Categoria
+            </a>
+        </div>
+        
+        <div class="admin-table">
+            <h2>Listado de Categorias</h2>
+            <?php if ($_smarty_tpl->tpl_vars['productos']->value) {?>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['categorias']->value, 'categoria');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['categoria']->value) {
+?>
+                        <tr>
+                            <td class="product-name"><?php echo $_smarty_tpl->tpl_vars['categoria']->value->nombre;?>
+</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+formeditarcategoria/<?php echo $_smarty_tpl->tpl_vars['categoria']->value->id_categoria;?>
+" class="btn-action btn-edit" title="Editar">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+eliminarcategoria/<?php echo $_smarty_tpl->tpl_vars['categoria']->value->id_categoria;?>
+" 
+                                       class="btn-action btn-delete" 
+                                       title="Eliminar"
+                                       onclick="return confirm('¿Estás seguro de eliminar esta categoria?')">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                    </tbody>
+                </table>
+            </div>
+            <?php } else { ?>
+            <div class="empty-table">
+                <i class="fas fa-box-open fa-3x"></i>
+                <p>No hay categorias registrados</p>
+                <a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+formagregarcategoria" class="btn btn-primary">Agregar categoria</a>
             </div>
             <?php }?>
         </div>
