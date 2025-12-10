@@ -56,7 +56,6 @@ La base de datos cuenta con tres tablas principales:
 - nombre (VARCHAR 100)
 - detalle (TEXT, opcional)
 - categoria (INT, clave foránea que referencia a categoria)
-- precio (DECIMAL)
 - imagen (VARCHAR 255, opcional)
 
 **Tabla user:**

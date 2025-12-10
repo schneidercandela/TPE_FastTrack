@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2025-10-19 07:05:57
+/* Smarty version 3.1.34-dev-7, created on 2025-10-22 02:16:52
   from 'C:\xampp\htdocs\TPEWeb2_FastTrack\templates\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_68f471b5dcfa12_56690087',
+  'unifunc' => 'content_68f82274ee0821_85928112',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '718350971cb9bdd26af9d4c6da9257764f09faf9' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPEWeb2_FastTrack\\templates\\footer.tpl',
-      1 => 1760850351,
+      1 => 1761092046,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_68f471b5dcfa12_56690087 (Smarty_Internal_Template $_smarty_tpl) {
+function content_68f82274ee0821_85928112 (Smarty_Internal_Template $_smarty_tpl) {
 ?><footer class="site-footer">
         <div class="container">
             <div class="footer-content">
@@ -51,7 +51,7 @@ admin">Administración</a></li>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Fast Track - Todos los derechos reservados</p>
+                <p>&copy; 2025 Fast Track - Todos los derechos reservados</p>
             </div>
         </div>
     </footer>
