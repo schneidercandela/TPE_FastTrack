@@ -23,7 +23,7 @@ class AuthController{
 
             header("Location: " . BASE_URL . "admin");
         } else {
-            header("Location: " . BASE_URL . "formLogin");
+            header("Location: " . BASE_URL . "formlogin");
         }
     }
 

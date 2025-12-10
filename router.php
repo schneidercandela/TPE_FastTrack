@@ -8,6 +8,7 @@ require_once 'middlewares/authMiddleware.php';
 
 define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']) . '/');
 
+
 if (empty($_GET['action'])) {
     $_GET['action'] = 'home';
 }
@@ -52,7 +53,7 @@ switch($param[0]){
         $controller->logout();    
     case 'admin':
         if (!$req->user) {
-            header("Location: " . BASE_URL . "formLogin");
+            header("Location: " . BASE_URL . "formlogin");
             exit;
         }
         $controller = new AdminController();
@@ -60,7 +61,7 @@ switch($param[0]){
         break; 
     case 'eliminarproducto':
         if (!$req->user) {
-            header("Location: " . BASE_URL . "formLogin");
+            header("Location: " . BASE_URL . "formlogin");
             exit;
         }
         $controller = new ProductoController();
@@ -68,7 +69,7 @@ switch($param[0]){
         break;   
     case 'formagregarproducto':
         if (!$req->user) {
-            header("Location: " . BASE_URL . "formLogin");
+            header("Location: " . BASE_URL . "formlogin");
             exit;
         }
         $controller = new ProductoController();
@@ -76,7 +77,7 @@ switch($param[0]){
         break;
     case 'agregarproducto':
         if (!$req->user) {
-            header("Location: " . BASE_URL . "formLogin");
+            header("Location: " . BASE_URL . "formlogin");
             exit;
         }
         $controller = new ProductoController();
@@ -84,7 +85,7 @@ switch($param[0]){
         break;     
     case 'formeditarproducto':
         if (!$req->user) {
-            header("Location: " . BASE_URL . "formLogin");
+            header("Location: " . BASE_URL . "formlogin");
             exit;
         }
         $controller = new ProductoController();
@@ -92,7 +93,7 @@ switch($param[0]){
         break;
     case 'editarproducto':
         if (!$req->user) {
-            header("Location: " . BASE_URL . "formLogin");
+            header("Location: " . BASE_URL . "formlogin");
             exit;
         }
         $controller = new ProductoController();
@@ -100,7 +101,7 @@ switch($param[0]){
         break;
     case 'eliminarcategoria':
         if (!$req->user) {
-            header("Location: " . BASE_URL . "formLogin");
+            header("Location: " . BASE_URL . "formlogin");
             exit;
         }
         $controller = new CategoriaController();
@@ -108,7 +109,7 @@ switch($param[0]){
         break;   
     case 'formagregarcategoria':
         if (!$req->user) {
-            header("Location: " . BASE_URL . "formLogin");
+            header("Location: " . BASE_URL . "formlogin");
             exit;
         }
         $controller = new CategoriaController();
@@ -116,7 +117,7 @@ switch($param[0]){
         break;
     case 'agregarcategoria':
         if (!$req->user) {
-            header("Location: " . BASE_URL . "formLogin");
+            header("Location: " . BASE_URL . "formlogin");
             exit;
         }
         $controller = new CategoriaController();
@@ -124,7 +125,7 @@ switch($param[0]){
         break;     
     case 'formeditarcategoria':
         if (!$req->user) {
-            header("Location: " . BASE_URL . "formLogin");
+            header("Location: " . BASE_URL . "formlogin");
             exit;
         }
         $controller = new CategoriaController();
@@ -132,7 +133,7 @@ switch($param[0]){
         break;
     case 'editarcategoria':
         if (!$req->user) {
-            header("Location: " . BASE_URL . "formLogin");
+            header("Location: " . BASE_URL . "formlogin");
             exit;
         }
         $controller = new CategoriaController();
